@@ -1,1 +1,1 @@
-# CreditBank
+# Credit Bank
