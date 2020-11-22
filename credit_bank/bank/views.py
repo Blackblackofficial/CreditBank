@@ -13,11 +13,11 @@ def index(request):
                   })
 
 
-def about(request):
-    return render(request, 'bank/about.html')
+def clients(request):
+    return render(request, 'bank/clients.html')
 
 
-def create(request):
+def calculator(request):
     error = ''
     if request.method == 'POST':
         form = PersonForm(request.POST)
@@ -32,4 +32,4 @@ def create(request):
         'form': form,
         'error': error
     }
-    return render(request, 'bank/create.html', context)
+    return render(request, 'bank/calculator.html', context)
