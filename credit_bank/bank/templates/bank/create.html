@@ -1,0 +1,20 @@
+{% extends 'bank/bank.html' %}
+
+{% block title %} Создать пользователя {% endblock %}
+
+{% block content %}
+<h2>Создадим пользователя</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>
+            <b>Имя:</b>
+        </label>
+        {{ form.name }}
+        <label>
+            <b>Описание:</b>
+        </label>
+        {{ form.address }}
+        <button type="submit" class="btn btn-outline-success">Сохранить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
